@@ -1,16 +1,26 @@
-import React from 'react';
-import { connect } from 'react-redux'
-import NameCard from './components/nameCard';
+import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Counter from './containers/counter';
+import Things from './containers/things'
 
-class App extends React.Component {
-    render() {
-      return (
-          <main>
-              <h1>Hello World!</h1>
-              <p>Nice to meet you React</p>
-              <NameCard/>
-          </main>
-      )
-    }
+
+class App extends Component {
+
+  render(){
+    return (
+      <main>
+        <Switch>
+            <Route exact path ="/" render={() => <h1 id="welcome">Welcome</h1>}/>
+
+            <Route path ="/counter" component={Counter} />
+
+            <Route path ="/things" component={Things} />
+        </Switch>
+
+      </main>
+    );
   }
-export default connect (null) (App)
+}
+
+
+export default App;
