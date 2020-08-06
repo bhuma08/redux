@@ -8,7 +8,7 @@ class App extends Component {
 
   render(){
     return (
-      <main>
+      <main id="app">
         <Switch>
             <Route exact path ="/" render={() => <h1 id="welcome">Welcome</h1>}/>
 
@@ -16,7 +16,6 @@ class App extends Component {
 
             <Route path ="/things" component={Things} />
         </Switch>
-
       </main>
     );
   }
