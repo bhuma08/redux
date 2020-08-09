@@ -6,9 +6,9 @@ class Counter extends Component {
         count : 0
     }
 
-    handleClickPlus = e => this.setState({ count: this.state.count ++})
+    handleClickPlus = e => this.setState({ count: this.state.count +1})
 
-    handleClickMinus = e => this.setState({ count: this.state.count --})
+    handleClickMinus = e => this.setState({ count: this.state.count -1})
 
     render() {
         return (
